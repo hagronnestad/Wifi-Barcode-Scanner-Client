@@ -36,7 +36,6 @@ Partial Class frmMain
         Me.cmnuSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.cmnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnSave = New System.Windows.Forms.Button()
         Me.grpExtraCommands = New System.Windows.Forms.GroupBox()
         Me.cmbAppendCommands = New System.Windows.Forms.ComboBox()
         Me.cmbPrependCommands = New System.Windows.Forms.ComboBox()
@@ -45,63 +44,63 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCustomAppend = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnApply = New System.Windows.Forms.Button()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.grpSendBarcode = New System.Windows.Forms.GroupBox()
         Me.grpGeneralSettings.SuspendLayout()
         Me.cmnuNI.SuspendLayout()
         Me.grpExtraCommands.SuspendLayout()
+        Me.grpSendBarcode.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpGeneralSettings
         '
-        Me.grpGeneralSettings.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.grpGeneralSettings.Controls.Add(Me.chkUseAdditionalCommands)
-        Me.grpGeneralSettings.Controls.Add(Me.chkCopyBarcodeToClipboard)
         Me.grpGeneralSettings.Controls.Add(Me.Label3)
         Me.grpGeneralSettings.Controls.Add(Me.Label2)
         Me.grpGeneralSettings.Controls.Add(Me.txtComputerID)
-        Me.grpGeneralSettings.Controls.Add(Me.chkSendBarcode)
         Me.grpGeneralSettings.Location = New System.Drawing.Point(12, 12)
         Me.grpGeneralSettings.Name = "grpGeneralSettings"
         Me.grpGeneralSettings.Padding = New System.Windows.Forms.Padding(8)
-        Me.grpGeneralSettings.Size = New System.Drawing.Size(329, 439)
+        Me.grpGeneralSettings.Size = New System.Drawing.Size(332, 104)
         Me.grpGeneralSettings.TabIndex = 0
         Me.grpGeneralSettings.TabStop = False
         Me.grpGeneralSettings.Text = "General settings"
         '
         'chkUseAdditionalCommands
         '
-        Me.chkUseAdditionalCommands.AutoSize = True
         Me.chkUseAdditionalCommands.Checked = Global.BarcodeScannerForPC.My.MySettings.Default.chkUseAdditionalCommands
         Me.chkUseAdditionalCommands.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkUseAdditionalCommands.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.BarcodeScannerForPC.My.MySettings.Default, "chkUseAdditionalCommands", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.chkUseAdditionalCommands.Location = New System.Drawing.Point(14, 134)
+        Me.chkUseAdditionalCommands.DataBindings.Add(New System.Windows.Forms.Binding("Enabled", Global.BarcodeScannerForPC.My.MySettings.Default, "chkSendBarcode", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.chkUseAdditionalCommands.Enabled = Global.BarcodeScannerForPC.My.MySettings.Default.chkSendBarcode
+        Me.chkUseAdditionalCommands.Location = New System.Drawing.Point(34, 44)
         Me.chkUseAdditionalCommands.Name = "chkUseAdditionalCommands"
-        Me.chkUseAdditionalCommands.Size = New System.Drawing.Size(153, 17)
+        Me.chkUseAdditionalCommands.Size = New System.Drawing.Size(256, 17)
         Me.chkUseAdditionalCommands.TabIndex = 12
         Me.chkUseAdditionalCommands.Text = "Send additional commands"
         Me.chkUseAdditionalCommands.UseVisualStyleBackColor = True
         '
         'chkCopyBarcodeToClipboard
         '
-        Me.chkCopyBarcodeToClipboard.AutoSize = True
         Me.chkCopyBarcodeToClipboard.Checked = Global.BarcodeScannerForPC.My.MySettings.Default.chkCopyBarcodeToClipboard
-        Me.chkCopyBarcodeToClipboard.Location = New System.Drawing.Point(14, 166)
+        Me.chkCopyBarcodeToClipboard.Location = New System.Drawing.Point(14, 76)
         Me.chkCopyBarcodeToClipboard.Name = "chkCopyBarcodeToClipboard"
-        Me.chkCopyBarcodeToClipboard.Size = New System.Drawing.Size(168, 17)
+        Me.chkCopyBarcodeToClipboard.Size = New System.Drawing.Size(293, 17)
         Me.chkCopyBarcodeToClipboard.TabIndex = 11
-        Me.chkCopyBarcodeToClipboard.Text = "Copy barcode to the clipboard"
+        Me.chkCopyBarcodeToClipboard.Text = "Copy the barcode to the clipboard"
         Me.chkCopyBarcodeToClipboard.UseVisualStyleBackColor = True
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Navy
         Me.Label3.Location = New System.Drawing.Point(11, 36)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(209, 13)
+        Me.Label3.Size = New System.Drawing.Size(307, 26)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Enter a unique name for this computer."
+        Me.Label3.Text = "Enter a unique name for this computer." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This name will be shown in the WiFi Barco" & _
+    "de Scanner app."
         '
         'Label2
         '
@@ -116,23 +115,22 @@ Partial Class frmMain
         'txtComputerID
         '
         Me.txtComputerID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.BarcodeScannerForPC.My.MySettings.Default, "txtComputerID", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.txtComputerID.Location = New System.Drawing.Point(14, 52)
+        Me.txtComputerID.Location = New System.Drawing.Point(14, 68)
         Me.txtComputerID.Name = "txtComputerID"
-        Me.txtComputerID.Size = New System.Drawing.Size(189, 22)
+        Me.txtComputerID.Size = New System.Drawing.Size(306, 22)
         Me.txtComputerID.TabIndex = 0
         Me.txtComputerID.Text = Global.BarcodeScannerForPC.My.MySettings.Default.txtComputerID
         '
         'chkSendBarcode
         '
-        Me.chkSendBarcode.AutoSize = True
         Me.chkSendBarcode.Checked = Global.BarcodeScannerForPC.My.MySettings.Default.chkSendBarcode
         Me.chkSendBarcode.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkSendBarcode.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.BarcodeScannerForPC.My.MySettings.Default, "chkSendBarcode", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.chkSendBarcode.Location = New System.Drawing.Point(14, 111)
+        Me.chkSendBarcode.Location = New System.Drawing.Point(14, 21)
         Me.chkSendBarcode.Name = "chkSendBarcode"
-        Me.chkSendBarcode.Size = New System.Drawing.Size(209, 17)
+        Me.chkSendBarcode.Size = New System.Drawing.Size(293, 17)
         Me.chkSendBarcode.TabIndex = 1
-        Me.chkSendBarcode.Text = "Send barcode to the active application"
+        Me.chkSendBarcode.Text = "Send the barcode to the active application"
         Me.chkSendBarcode.UseVisualStyleBackColor = True
         '
         'ni
@@ -164,16 +162,6 @@ Partial Class frmMain
         Me.cmnuExit.Name = "cmnuExit"
         Me.cmnuExit.Size = New System.Drawing.Size(116, 22)
         Me.cmnuExit.Text = "Exit"
-        '
-        'btnSave
-        '
-        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSave.Location = New System.Drawing.Point(598, 535)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(89, 25)
-        Me.btnSave.TabIndex = 1
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
         '
         'grpExtraCommands
         '
@@ -265,14 +253,49 @@ Partial Class frmMain
         Me.Label4.TabIndex = 11
         Me.Label4.Text = resources.GetString("Label4.Text")
         '
+        'btnApply
+        '
+        Me.btnApply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnApply.Location = New System.Drawing.Point(563, 476)
+        Me.btnApply.Name = "btnApply"
+        Me.btnApply.Size = New System.Drawing.Size(89, 25)
+        Me.btnApply.TabIndex = 3
+        Me.btnApply.Text = "Apply"
+        Me.btnApply.UseVisualStyleBackColor = True
+        '
+        'btnOK
+        '
+        Me.btnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnOK.Location = New System.Drawing.Point(468, 476)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(89, 25)
+        Me.btnOK.TabIndex = 4
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'grpSendBarcode
+        '
+        Me.grpSendBarcode.Controls.Add(Me.chkUseAdditionalCommands)
+        Me.grpSendBarcode.Controls.Add(Me.chkSendBarcode)
+        Me.grpSendBarcode.Controls.Add(Me.chkCopyBarcodeToClipboard)
+        Me.grpSendBarcode.Location = New System.Drawing.Point(12, 122)
+        Me.grpSendBarcode.Name = "grpSendBarcode"
+        Me.grpSendBarcode.Size = New System.Drawing.Size(332, 104)
+        Me.grpSendBarcode.TabIndex = 5
+        Me.grpSendBarcode.TabStop = False
+        Me.grpSendBarcode.Text = "Barcode settings"
+        '
         'frmMain
         '
+        Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(699, 567)
+        Me.ClientSize = New System.Drawing.Size(664, 513)
+        Me.Controls.Add(Me.grpSendBarcode)
+        Me.Controls.Add(Me.btnApply)
+        Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.grpExtraCommands)
         Me.Controls.Add(Me.grpGeneralSettings)
-        Me.Controls.Add(Me.btnSave)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -280,12 +303,13 @@ Partial Class frmMain
         Me.MinimizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Barcode Scanner For PC"
+        Me.Text = "WiFi Barcode Scanner Software"
         Me.grpGeneralSettings.ResumeLayout(False)
         Me.grpGeneralSettings.PerformLayout()
         Me.cmnuNI.ResumeLayout(False)
         Me.grpExtraCommands.ResumeLayout(False)
         Me.grpExtraCommands.PerformLayout()
+        Me.grpSendBarcode.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -299,7 +323,6 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents cmnuExit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents grpExtraCommands As System.Windows.Forms.GroupBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtCustomPrepend As System.Windows.Forms.TextBox
@@ -310,5 +333,8 @@ Partial Class frmMain
     Friend WithEvents cmbAppendCommands As System.Windows.Forms.ComboBox
     Friend WithEvents chkCopyBarcodeToClipboard As System.Windows.Forms.CheckBox
     Friend WithEvents chkUseAdditionalCommands As System.Windows.Forms.CheckBox
+    Friend WithEvents btnApply As System.Windows.Forms.Button
+    Friend WithEvents btnOK As System.Windows.Forms.Button
+    Friend WithEvents grpSendBarcode As System.Windows.Forms.GroupBox
 
 End Class

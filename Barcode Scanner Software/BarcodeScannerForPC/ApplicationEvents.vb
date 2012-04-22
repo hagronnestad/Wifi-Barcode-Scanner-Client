@@ -10,7 +10,7 @@
     Partial Friend Class MyApplication
 
         Private Sub MyApplication_StartupNextInstance(sender As Object, e As Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs) Handles Me.StartupNextInstance
-            frmMain.ni.ShowBalloonTip(3000, "Barcode Scanner for PC", "Barcode Scanner for PC is already running. Click this baloon to show the configuration window.", ToolTipIcon.Info)
+            frmMain.ShowBalloonTip(True)
         End Sub
     End Class
 
