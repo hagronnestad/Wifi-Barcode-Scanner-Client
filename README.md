@@ -1,13 +1,13 @@
 WiFi Barcode Scanner
 ====================
 
-WiFi Barcode Scanner is an Android app that makes it possible to use your Android phone as a barcode scanner for your computer.
+[WiFi Barcode Scanner](https://play.google.com/store/apps/details?id=no.hag.android.barcodescannerforpc) is an Android app that makes it possible to use your Android phone as a barcode scanner for your computer.
 All you need is the WiFi Barcode Scanner Android app and the WiFi Barcode Scanner Software for your computer.
 
 As long as your phone and your computer is connected to the same network, you can use your phone as a barcode scanner as if it where connected directly to your computer.
 The WiFi Barcode Scanner Android app and the WiFi Barcode Scanner Software communicates wirelessly over your WiFi network.
 
-The WiFi Barcode Scanner Android app uses the ZXing Barcode Scanner (https://play.google.com/store/apps/details?id=com.google.zxing.client.android) to scan barcodes.
+The WiFi Barcode Scanner Android app uses the [ZXing Barcode Scanner](https://play.google.com/store/apps/details?id=com.google.zxing.client.android) to scan barcodes.
 ZXing Barcode Scanner is the most popular barcode scanning app for Android, and supports multiple barcode formats.
 
 
