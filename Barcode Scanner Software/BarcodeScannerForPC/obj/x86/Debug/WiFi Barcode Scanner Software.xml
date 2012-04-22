@@ -6,20 +6,7 @@ WiFiBarcodeScannerSoftware
 </name>
 </assembly>
 <members>
-<member name="P:BarcodeScannerForPC.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:BarcodeScannerForPC.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:BarcodeScannerForPC.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="E:BarcodeScannerForPC.BarcodeReceiver.BarcodeReceived">
+<member name="E:BarcodeScannerForPC.BarcodeReceiver.BarcodeReceived">
 	<summary>
  This event is raised when a barcode has been received from the scanner app.
  </summary>
@@ -59,6 +46,19 @@ WiFiBarcodeScannerSoftware
  and raises an event when a barcode has been received.
  </summary>
 	<remarks></remarks>
+</member><member name="P:BarcodeScannerForPC.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BarcodeScannerForPC.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:BarcodeScannerForPC.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member>
 </members>
 </doc>
