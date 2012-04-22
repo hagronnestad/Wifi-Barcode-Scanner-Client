@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WiFiBarcodeScannerSoftware
+</name>
+</assembly>
+<members>
+<member name="E:BarcodeScannerForPC.BarcodeReceiver.BarcodeReceived">
+	<summary>
+ This event is raised when a barcode has been received from the scanner app.
+ </summary>
+	<param name="Barcode"></param>
+	<remarks></remarks>
+</member><member name="M:BarcodeScannerForPC.BarcodeReceiver.Start">
+	<summary>
+ Binds an UDP socket to a free port, and starts the barcode receiver.
+ Use GetLocalPort() to get the local port of the UDP socket.
+ </summary>
+	<returns>True on success and false on failure.</returns>
+	<remarks></remarks>
+</member><member name="M:BarcodeScannerForPC.BarcodeReceiver.GetLocalPort">
+	<summary>
+ Gets the local port of the UDP socket.
+ </summary>
+	<returns>An UDP port number as an Integer.</returns>
+	<remarks></remarks>
+</member><member name="M:BarcodeScannerForPC.BarcodeReceiver.bw_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+	<summary>
+ This method receives barcodes asynchronous.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:BarcodeScannerForPC.BarcodeReceiver.bw_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+	<summary>
+ When a barcode has been received, this event is called.
+ This event is called on the main thread, so raising our own events here make them thread safe.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:BarcodeScannerForPC.BarcodeReceiver">
+	<summary>
+ The BarcodeReceiver receives barcodes from the scanner app
+ and raises an event when a barcode has been received.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:BarcodeScannerForPC.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:BarcodeScannerForPC.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:BarcodeScannerForPC.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
