@@ -22,3 +22,15 @@ U:\Programmering\VB.NET\BarcodeScannerForPC\Barcode Scanner Software\BarcodeScan
 U:\Programmering\VB.NET\BarcodeScannerForPC\Barcode Scanner Software\BarcodeScannerForPC\obj\x86\Debug\BarcodeScannerForPC.Resources.resources
 U:\Programmering\VB.NET\BarcodeScannerForPC\Barcode Scanner Software\BarcodeScannerForPC\obj\x86\Debug\GenerateResource.read.1.tlog
 U:\Programmering\VB.NET\BarcodeScannerForPC\Barcode Scanner Software\BarcodeScannerForPC\obj\x86\Debug\GenerateResource.write.1.tlog
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\bin\Debug\WiFi Barcode Scanner Software.exe.config
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\WiFi Barcode Scanner Software.exe
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\WiFi Barcode Scanner Software.xml
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\WiFi Barcode Scanner Software.pdb
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\bin\Debug\WiFi Barcode Scanner Software.exe
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\bin\Debug\WiFi Barcode Scanner Software.pdb
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\bin\Debug\WiFi Barcode Scanner Software.xml
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\ResolveAssemblyReference.cache
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\BarcodeScannerForPC.frmMain.resources
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\BarcodeScannerForPC.Resources.resources
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\GenerateResource.read.1.tlog
+U:\Programmering\VB.NET\BarcodeScannerForPC\WiFi Barcode Scanner Software - Source Code\BarcodeScannerForPC\obj\x86\Debug\GenerateResource.write.1.tlog
