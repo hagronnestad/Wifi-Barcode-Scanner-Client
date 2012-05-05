@@ -7,8 +7,7 @@ The packet payload is UTF-8 encoded plain text.
 
 
 
-WiFi Barcode Scanner Broadcast Packet
--------------------------------------
+### WiFi Barcode Scanner Broadcast Packet
 The "WiFi Barcode Scanner Broadcast"-packet always starts with the text "WiFi Barcode Scanner Broadcast". The version code and the version name of the app is also included. The parameters in the packet is delimited by a pipe character (|).
 
 An example packet could be:
